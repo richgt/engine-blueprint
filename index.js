@@ -79,10 +79,10 @@ module.exports = Object.assign({}, Addon, {
     if (this._files) { return this._files; }
 
     this._appBlueprint = this.lookupBlueprint('app');
-    let appFiles = this._appBlueprint.files();
+    let appFiles = this._appBlueprint.files({});
 
     this._addonBlueprint = this.lookupBlueprint('addon');
-    let addonFiles = this._addonBlueprint.files();
+    let addonFiles = this._addonBlueprint.files({});
 
     let filesPath = this.filesPath(this.options);
     let engineFiles = [];
